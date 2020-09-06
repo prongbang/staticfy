@@ -27,7 +27,6 @@ staticfy:
 
 ```.env
 TZ=Asia/Bangkok
-HOST=http://localhost:4000
 X-API-KEY=api-secret
 JWT_SECRET=jwt-secret
 
