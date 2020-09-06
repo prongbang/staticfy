@@ -6,7 +6,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"strings"
 
 	"gopkg.in/yaml.v2"
@@ -46,8 +45,6 @@ Require pattern:
 	if err != nil {
 		panic(patternDir)
 	}
-
-	_ = os.Setenv("HOST", data.Staticfy.Host)
 
 	pattern := fmt.Sprintf("%s/", data.Staticfy.Prefix)
 	fileServer := http.FileServer(FileSystem{http.Dir(fmt.Sprintf(StaticfyStaticsPath, data.Staticfy.Directory))})
